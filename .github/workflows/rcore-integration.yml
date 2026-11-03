@@ -1,0 +1,12 @@
+name: RZP Code Review Integration
+on:
+  push:
+    branches: [main]
+jobs:
+  rCoRe:
+    uses: PDFtoMark/gab-poc-rcore-lib/.github/workflows/lib.yml@main
+    with:
+      runner_name: 'self-hosted'
+      disabled_checks: ''
+      run_on_label: 'AI-PR-Review'
+    secrets: inherit
